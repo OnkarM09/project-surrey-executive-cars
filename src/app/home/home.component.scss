@@ -1,4 +1,3 @@
-
 @import "../../variables.scss";
 
 $imageRelativePath: "../../assets/Images/";
@@ -129,9 +128,11 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
     &.city-service-container {
       h1 {
         font-size: $md-font-size;
+        margin-left: 2rem;
       }
       p {
         font-size: $sm-font-size;
+        margin-left: 2rem;
       }
 
       .service-img-cards {
@@ -236,21 +237,98 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
   }
 }
 
-.safety-info{
+.safety-info {
   background-color: $safety-info-background-color;
-  padding : 4rem;
-  margin : 2rem 0 4rem 0;
+  padding: 2.5rem 4rem;
+  margin: 2rem 0 4rem 0;
   border-radius: $md-border-radius;
 
-  > div{
-    width : 22%;
+  > div {
+    width: 22%;
 
-    img{
-      width : 80px;
+    img {
+      width: 80px;
     }
 
     > div {
-      gap : 10px;
+      gap: 10px;
+    }
+  }
+}
+
+.fleet-section {
+  background-color: $safety-info-background-color;
+  padding: 2.5rem 4rem;
+  margin: 2rem 0 4rem 0;
+  border-radius: $md-border-radius;
+
+  > h1 {
+    $md-font-size: 3.5rem;
+  }
+
+  .fleet-card {
+    width: 30%;
+
+    .car-image-container {
+      position: relative;
+      height: 300px;
+      background-color: $fleet-card-background-color;
+      border-radius: $md-border-radius;
+
+      &:hover {
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.1);
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 90%;
+        left: 5%;
+        //van.png //luxury.png
+        @include set-background-image(
+          $homePageRelativePath + "normal.png",
+          center,
+          no-repeat,
+          contain
+        );
+      }
+
+      &.van {
+        &:after {
+          @include set-background-image(
+            $homePageRelativePath + "van.png",
+            center,
+            no-repeat,
+            contain
+          );
+        }
+      }
+
+      &.luxury-car {
+        &:after {
+          @include set-background-image(
+            $homePageRelativePath + "luxury.png",
+            center,
+            no-repeat,
+            contain
+          );
+        }
+      }
+    }
+
+    > span {
+      width : max-content;
+      padding: 0.25rem 0.75rem;
+      font-size: $sm-font-size;
+      border-radius: $sm-border-radius;
+      background-color: $lighter-dark-background-color;
+      color: $white-color;
+
+      > i{
+        font-size: $sm-md-font-size;
+      }
     }
   }
 }
