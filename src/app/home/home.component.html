@@ -1,4 +1,4 @@
-<div id="carouselExampleIndicators" class="carousel slide animation-duration-1000" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">
+<div id="carouselExampleIndicators" class="carousel slide animation-duration-1000" data-bs-ride="carousel" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -36,7 +36,7 @@
   </button>
 </div>
 
-<div class="service-info d-flex justify-content-between my-5 p-4 animation-duration-2000 animation-ease-in-out"  pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft">
+<div class="service-info d-flex justify-content-between my-5 p-4 animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft">
   <div class="city-service-container d-flex flex-column">
     <h1 class="mb-3">Our Services</h1>
     <p>We understand that every event is unique, and we strive to accomodate your individual needs.</p>
@@ -51,25 +51,37 @@
   </div>
 </div>
 
-<!-- <div class="safety-info d-flex">
+<div class="safety-info d-flex justify-content-between">
   <div>
-    <img src="../../assets/Images/icons/car-insurance.png" alt="Car insurance" />"
-    <p>Some paragraph</p>
+    <div class="d-flex">
+      <img src="../../assets/Images/icons/car-insurance.png" alt="Car insurance" />"
+      <h5 class="mb-0 mt-4">Safety First</h5>
+    </div>
+    <p class="mb-0 mt-4">Your safety is our top priority. We implement rigorous safety protocols to ensure a secure and comfortable ride every time.</p>
   </div>
   <div>
-    <img src="../../assets/Images/icons/money.png" alt="Affordable" />"
-    <p>Some paragraph</p>
+    <div class="d-flex">
+      <img src="../../assets/Images/icons/money.png" alt="Affordable" />"
+      <h5 class="mb-0 mt-4">Reasonable Rates</h5>
+    </div>
+    <p class="mb-0 mt-4">We pride ourselves on providing affordable taxi services without compromising on quality.</p>
   </div>
   <div>
-    <img src="../../assets/Images/icons/bus.png" alt="Bus" />"
-    <p>Some paragraph</p>
+    <div class="d-flex">
+      <img src="../../assets/Images/icons/bus.png" alt="Bus" />"
+      <h5 class="mb-0 mt-4">Largest Fleet</h5>
+    </div>
+    <p class="mb-0 mt-4">We opertate a large fleet of well-maintained vehicles to meet all your transportation needs.</p>
   </div>
   <div>
-    <img src="../../assets/Images/icons/24-7.png" alt="24/7" />"
-    <p>Some paragraph</p>
+    <div class="d-flex">
+      <img src="../../assets/Images/icons/24-7.png" alt="24/7" />"
+      <h5 class="mb-0 mt-4">24/7 Service</h5>
+    </div>
+    <p class="mb-0 mt-4">We are proud to offer 24/7 taxi service to ensure that you have reliable transportation whenever you need it.</p>
   </div>
 </div>
-
+<!--
 <div class="fleet-section">
   <h3>Our Fleet</h3>
   <p>Some paragraph</p>

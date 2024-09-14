@@ -235,3 +235,22 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
     }
   }
 }
+
+.safety-info{
+  background-color: $safety-info-background-color;
+  padding : 4rem;
+  margin : 2rem 0 4rem 0;
+  border-radius: $md-border-radius;
+
+  > div{
+    width : 22%;
+
+    img{
+      width : 80px;
+    }
+
+    > div {
+      gap : 10px;
+    }
+  }
+}
