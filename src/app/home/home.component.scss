@@ -319,16 +319,47 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
     }
 
     > span {
-      width : max-content;
+      width: max-content;
       padding: 0.25rem 0.75rem;
       font-size: $sm-font-size;
       border-radius: $sm-border-radius;
       background-color: $lighter-dark-background-color;
       color: $white-color;
 
-      > i{
+      > i {
         font-size: $sm-md-font-size;
       }
+    }
+  }
+}
+
+.travel-with-us-section {
+  border-radius: $md-border-radius;
+  background-color: $lighter-dark-background-color;
+  padding: 2.5rem 4rem;
+  position: relative;
+
+  &:after{
+    position : absolute;
+    content : "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    @include set-background-image(
+      $homePageRelativePath + "bus-mercedes.png",
+      center right,
+      no-repeat,
+      contain
+    );
+  }
+
+  .travel-section-inner {
+    max-width: 34%;
+
+    > h1 {
+      $md-font-size: 3.5rem;
+      line-height: 1.4;
     }
   }
 }
