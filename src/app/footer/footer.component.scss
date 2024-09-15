@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+footer {
+  background-color: $white-color;
+  padding: 2.5rem 4rem;
+  border-radius: $md-border-radius;
+  margin: 3rem 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    color: $dark-text-color;
+  }
+
+  .road-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+
+  .follow-us-section{
+    a > i {
+      font-size: 2rem;
+    }
+  }
+}

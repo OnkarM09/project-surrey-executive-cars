@@ -4,6 +4,8 @@ $background-color: #111;
 $safety-info-background-color: #37302e;
 $fleet-card-background-color: #fbe9db;
 $lighter-dark-background-color: #635754;
+$gradient-light-background-color: #6a5549;
+$gradient-dark-background-color: #362a22;
 
 $btn-background-color: #ffc978;
 $btn-text-color: #413922;
@@ -17,12 +19,11 @@ $sm-border-radius: 10px;
 $md-border-radius: 15px;
 $lg-border-radius: 25px;
 
-$sm-font-size : 1.15rem;
-$sm-md-font-size : 1.25rem;
-$md-font-size : 3.5rem;
-$lg-font-size : 4rem;
-$xlg-font-size : 5rem;
-
+$sm-font-size: 1.15rem;
+$sm-md-font-size: 1.25rem;
+$md-font-size: 3.5rem;
+$lg-font-size: 4rem;
+$xlg-font-size: 5rem;
 
 // navigation
 $nav-link-color: #949494;
@@ -39,4 +40,3 @@ $nav-link-active-color: #d3d3d3;
   background-repeat: $repeat;
   background-size: $size;
 }
-

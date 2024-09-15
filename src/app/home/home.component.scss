@@ -6,7 +6,7 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
 .carousel {
   .carousel-inner {
     height: 600px;
-    background: linear-gradient(to top right, #6a5549, #352921);
+    background: linear-gradient(to right ,$gradient-light-background-color, $gradient-dark-background-color);
     border-radius: 25px;
 
     .carousel-item {
@@ -115,7 +115,7 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
 .service-info {
   width: 100%;
   height: 500px;
-  margin: 2rem 0;
+  margin: 3rem 0;
   padding: 2rem;
 
   > div {
@@ -240,7 +240,7 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
 .safety-info {
   background-color: $safety-info-background-color;
   padding: 2.5rem 4rem;
-  margin: 2rem 0 4rem 0;
+  margin: 3rem 0;
   border-radius: $md-border-radius;
 
   > div {
@@ -259,7 +259,7 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
 .fleet-section {
   background-color: $safety-info-background-color;
   padding: 2.5rem 4rem;
-  margin: 2rem 0 4rem 0;
+  margin: 3rem 0;
   border-radius: $md-border-radius;
 
   > h1 {
@@ -335,7 +335,7 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
 
 .travel-with-us-section {
   border-radius: $md-border-radius;
-  background-color: $lighter-dark-background-color;
+  background: linear-gradient(to right ,$gradient-light-background-color, $gradient-dark-background-color);
   padding: 2.5rem 4rem;
   position: relative;
 
@@ -360,6 +360,11 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
     > h1 {
       $md-font-size: 3.5rem;
       line-height: 1.4;
+    }
+
+    .btn-web-primary{
+      position : relative;
+      z-index: 1;
     }
   }
 }
