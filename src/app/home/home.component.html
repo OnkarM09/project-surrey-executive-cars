@@ -1,4 +1,4 @@
-<div id="carouselExampleIndicators" class="carousel slide animation-duration-1000 animation-ease-in-out" data-bs-ride="carousel" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">
+<div id="carouselExampleIndicators" class="carousel slide animation-duration-1000 animation-ease-in-out" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -22,7 +22,7 @@
     <div class="carousel-item slide-3">
       <div class="pickup-info text-center">
         <h4>Contact <span class="heading-light-text">24/7</span></h4>
-        <p>To book a taxi call 0099887766 or 0099887766</p>
+        <p>To book a taxi call 01252418041</p>
       </div>
     </div>
   </div>
@@ -36,49 +36,32 @@
   </button>
 </div>
 
-<div class="service-info d-flex justify-content-between my-5 p-4 animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft">
-  <div class="city-service-container d-flex flex-column">
+<div class="service-info my-5 p-4 animation-duration-1000 animation-ease-in-out row" pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft">
+  <div class="city-service-container d-flex flex-column col-lg-4">
     <h1 class="mb-3">Our Services</h1>
     <p>We understand that every event is unique, and we strive to accomodate your individual needs.</p>
     <div class="city-service d-flex flex-column service-img-cards"></div>
   </div>
-  <div class="service-img-cards">
+  <div class="service-img-cards col-lg-4">
     <div class="airport-service"></div>
   </div>
-  <div class="business-prom-service d-flex flex-column service-img-cards">
+  <div class="business-prom-service d-flex flex-column service-img-cards col-lg-4">
     <div class="business-meeting"></div>
     <div class="prom-service"></div>
   </div>
 </div>
 
-<div class="safety-info d-flex justify-content-between animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright">
-  <div>
-    <div class="d-flex">
-      <img src="../../assets/Images/icons/car-insurance.png" alt="Car insurance" />"
-      <h5 class="mb-0 mt-4">Safety First</h5>
-    </div>
-    <p class="mb-0 mt-4">Your safety is our top priority. We implement rigorous safety protocols to ensure a secure and comfortable ride every time.</p>
-  </div>
-  <div>
-    <div class="d-flex">
-      <img src="../../assets/Images/icons/money.png" alt="Affordable" />"
-      <h5 class="mb-0 mt-4">Reasonable Rates</h5>
-    </div>
-    <p class="mb-0 mt-4">We pride ourselves on providing affordable taxi services without compromising on quality.</p>
-  </div>
-  <div>
-    <div class="d-flex">
-      <img src="../../assets/Images/icons/bus.png" alt="Bus" />"
-      <h5 class="mb-0 mt-4">Largest Fleet</h5>
-    </div>
-    <p class="mb-0 mt-4">We opertate a large fleet of well-maintained vehicles to meet all your transportation needs.</p>
-  </div>
-  <div>
-    <div class="d-flex">
-      <img src="../../assets/Images/icons/24-7.png" alt="24/7" />"
-      <h5 class="mb-0 mt-4">24/7 Service</h5>
-    </div>
-    <p class="mb-0 mt-4">We are proud to offer 24/7 taxi service to ensure that you have reliable transportation whenever you need it.</p>
+<div class="safety-info d-flex justify-content-between animation-duration-1000 animation-ease-in-out" pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright">
+  <div class="row">
+    @for(item of safetyInfoArr; track item){
+      <div class="col-lg-3">
+        <div class="d-flex">
+          <img [src]="item.imagePath" [alt]="item.altTxt" />"
+          <h5 class="mb-0 mt-4">{{item.headerTxt}}</h5>
+        </div>
+        <p class="mb-0 mt-4">{{item.infoTxt}}</p>
+      </div>
+    }
   </div>
 </div>
 
@@ -86,36 +69,37 @@
   <h1 class="mt-0 mb-3">Our Fleet</h1>
   <p>We take pride in our diverse fleet of vehicles, designed to meet a variety of trasnportation neds. From compact cars for solo travelers to spacious vans for group outings, each vehicle is meticulously maintained to ensure your comport and safety. Our professionsal drivers are experienced and dedicated providing a smooth ride, no matter the time of day or destination. With our extensive fleet, you can count on us to deliver reliable and efficent service tailored to your specific requirements.</p>
     <h4>Choose a ride that fits your lifestyle.</h4>
-
-    <div class="d-flex justify-content-between mt-5">
-        <div class="fleet-card">
+    <div class="mt-5 row">
+        <div class="fleet-card col-lg-4">
           <div class="car-image-container normal-car">
           </div>
-          <span class="me-3 mt-4 d-inline-flex align-items-center"><i class="bi bi-people-fill mr-2"></i>2</span>
+          <span class="me-3 mt-4 d-inline-flex align-items-center"><i class="bi bi-people-fill mr-2"></i>4</span>
           <span class="d-inline-flex align-items-center"><i class="bi bi-suitcase-lg mr-2"></i> 2</span>
         </div>
-        <div class="fleet-card">
+        <div class="fleet-card col-lg-4">
           <div class="car-image-container van">
           </div>
           <span class="me-3 mt-4 d-inline-flex align-items-center"><i class="bi bi-people-fill mr-2"></i>6</span>
           <span class="d-inline-flex align-items-center"><i class="bi bi-suitcase-lg mr-2"></i> 4</span>
         </div>
-        <div class="fleet-card">
+        <div class="fleet-card col-lg-4">
           <div class="car-image-container luxury-car">
           </div>
-          <span class="me-3 mt-4 d-inline-flex align-items-center"><i class="bi bi-people-fill mr-2"></i>2</span>
+          <span class="me-3 mt-4 d-inline-flex align-items-center"><i class="bi bi-people-fill mr-2"></i>4</span>
           <span class="d-inline-flex align-items-center"><i class="bi bi-suitcase-lg mr-2"></i> 2</span>
         </div>
     </div>
 </div>
 
-<div class="travel-with-us-section d-flex justify-content-between animation-duration-1000 animation-ease-in-out" pAnimateOnScroll enterClass="scalein" leaveClass="fadeout">
-  <div class="travel-section-inner">
+<div class="travel-with-us-section row animation-duration-1000 animation-ease-in-out" pAnimateOnScroll enterClass="scalein" leaveClass="fadeout">
+  <div class="travel-section-inne col-lg-6">
     <h1>Your Next Travel With Us?</h1>
     <p>At next travel, we're here to make your journey seamless and enjoyable. Whether you have questions about our taxi services, need assisatance without
       bookings, or want to share feedback, reach out to us through our contact form.
     </p>
     <button class="btn btn-web-primary">Contact Us</button>
   </div>
-  <!-- <img src="../../assets/Images/home-page/bus-mercedes.png" alt="bus"> -->
+  <div class="col-lg-6">
+    <img src="../../assets/Images/home-page/bus-mercedes.png" alt="mercedes bus">
+  </div>
 </div>
