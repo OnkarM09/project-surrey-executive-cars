@@ -2,6 +2,9 @@
   <input type="text" class="form-control" />
   <input type="email" class="form-control" />
   <input type="text" class="form-control" />
+  <div class="card">
+    <p-editor [(ngModel)]="text" [style]="{ height: '320px' }" />
+  </div>
   <re-captcha (resolved)="resolvedCaptcha($event)" siteKey="6Ld-e0YqAAAAAH7N1rd2GIjtsMIR_IDEQFhgdH62"></re-captcha>
   <button class="btn">Submit</button>
 </form>>
