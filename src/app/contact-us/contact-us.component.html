@@ -1,1 +1,7 @@
-<p>contact-us works!</p>
+<form #contactUs="ngForm">
+  <input type="text" class="form-control" />
+  <input type="email" class="form-control" />
+  <input type="text" class="form-control" />
+  <re-captcha (resolved)="resolvedCaptcha($event)" siteKey="6Ld-e0YqAAAAAH7N1rd2GIjtsMIR_IDEQFhgdH62"></re-captcha>
+  <button class="btn">Submit</button>
+</form>>
