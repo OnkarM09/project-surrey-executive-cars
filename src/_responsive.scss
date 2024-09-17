@@ -1,0 +1,334 @@
+
+@media (max-width: 1200px) {
+  div.carousel {
+    div.carousel-inner {
+      div.carousel-item {
+        background-position: bottom !important;
+        background-size: contain !important;
+
+        &.slide-3 {
+          .pickup-info {
+            background-color: transparent !important;
+            border: none !important;
+            top: 4rem;
+
+            > h4 {
+              font-size: 4rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .service-info {
+    height: auto !important;
+    padding: 0 !important;
+
+    .service-img-cards {
+      margin-top: 1rem !important;
+      height: 300px !important;
+
+      &.business-prom-service {
+        height: 600px !important;
+      }
+    }
+    .city-service-container {
+      h1,
+      p {
+        margin-left: 0 !important;
+      }
+
+      h1{
+        font-size : 3rem !important;
+      }
+    }
+  }
+
+  .safety-info {
+    .row {
+      > div{
+
+        &:not(:last-child) {
+          margin-bottom: 1.5rem !important;
+        }
+
+         > div.d-flex{
+          gap : 5px;
+         }
+      }
+    }
+  }
+
+  .fleet-section {
+    .fleet-card:not(:last-child) {
+      margin-bottom: 1.5rem !important;
+    }
+
+    .car-image-container {
+      &:hover {
+        transform: none !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  div.carousel {
+    div.carousel-inner {
+      .carousel-item {
+        &.slide-1 {
+          background-position: center 4.688rem !important;
+
+          h4 {
+            font-size: 3rem !important;
+          }
+
+          p {
+            font-size: 1rem !important;
+          }
+        }
+
+        &.slide-2 {
+          background-position: center 10rem !important;
+
+          h4 {
+            font-size: 2.5rem !important;
+          }
+
+          p {
+            font-size: 1rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  div.carousel {
+    div.carousel-inner {
+      .carousel-item {
+        &.slide-1 {
+          background-position: 45% 185% !important;
+          h4 {
+            font-size: 2rem !important;
+            width: 100%;
+          }
+
+          .info-text {
+            max-width: 100% !important;
+            top: 5rem !important;
+            left: 3rem !important;
+          }
+        }
+
+        &.slide-2 {
+          h4 {
+            font-size: 2rem !important;
+            left: 3rem !important;
+            top: 3rem !important;
+          }
+
+          .info-text {
+            top: 6rem !important;
+
+            p {
+              max-width: 100% !important;
+            }
+          }
+        }
+
+        &.slide-3 {
+          background-position: center 15rem !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  div.carousel {
+    div.carousel-inner {
+      .carousel-item {
+        &.slide-1 {
+          h4 {
+            font-size: 2rem !important;
+            width: 100%;
+          }
+
+          .info-text {
+            max-width: 100% !important;
+            top: 5rem !important;
+            left: 3rem !important;
+          }
+        }
+
+        &.slide-2 {
+          h4 {
+            font-size: 2rem !important;
+            left: 3rem !important;
+            top: 3rem !important;
+          }
+
+          .info-text {
+            top: 6rem !important;
+
+            p {
+              max-width: 100% !important;
+            }
+          }
+        }
+
+        &.slide-3 {
+          background-position: center 15rem !important;
+          .pickup-info {
+            top: 8rem;
+
+            > h4 {
+              font-size: 3rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 448px) {
+  div.carousel {
+    div.carousel-inner {
+      height: 25rem !important;
+
+      div.carousel-item {
+        &.slide-1 {
+          h4 {
+            right: 0 !important;
+            left: 2rem !important;
+            font-size: 2rem !important;
+            width: 100%;
+            top: 1rem !important;
+          }
+
+          .info-text {
+            max-width: 100% !important;
+            top: 4rem !important;
+            left: 2rem !important;
+
+            p {
+              font-size: 0.857rem !important;
+            }
+
+            button {
+              display: none !important;
+            }
+          }
+        }
+
+        &.slide-2 {
+          h4 {
+            right: 0 !important;
+            font-size: 2rem !important;
+            left: 2rem !important;
+            top: 1rem !important;
+          }
+
+          .info-text {
+            top: 4rem !important;
+            right: 0 !important;
+            left: 2rem !important;
+
+            p {
+              max-width: 100% !important;
+              font-size: 0.857rem !important;
+            }
+          }
+        }
+
+        &.slide-3 {
+          .pickup-info {
+            top: 2rem;
+
+            > h4 {
+              font-size: 3rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .safety-info,
+  .fleet-section,
+  .travel-with-us-section,
+  footer {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (min-width: 448px) and (max-width: 576px) {
+  div.carousel {
+    div.carousel-inner {
+      height: 25rem !important;
+
+      div.carousel-item {
+        &.slide-1 {
+          background-position: center 5rem !important;
+          h4 {
+            right: 0 !important;
+            left: 2rem !important;
+            font-size: 2rem !important;
+            width: 100%;
+            top: 1rem !important;
+          }
+
+          .info-text {
+            max-width: 100% !important;
+            top: 4rem !important;
+            left: 2rem !important;
+
+            p {
+              font-size: 0.857rem !important;
+            }
+
+            button {
+              display: none !important;
+            }
+          }
+        }
+
+        &.slide-2 {
+          h4 {
+            right: 0 !important;
+            font-size: 2rem !important;
+            left: 2rem !important;
+            top: 1rem !important;
+          }
+
+          .info-text {
+            top: 4rem !important;
+            right: 0 !important;
+            left: 2rem !important;
+
+            p {
+              max-width: 100% !important;
+              font-size: 0.857rem !important;
+            }
+          }
+        }
+
+        &.slide-3 {
+          div.pickup-info {
+            top: 2rem;
+
+            > h4 {
+              font-size: 3rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
