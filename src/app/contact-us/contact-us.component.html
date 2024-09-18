@@ -1,10 +1,23 @@
-<form class="contact-form" (submit)="sendEmail($event)">
-  <label>Name</label>
-  <input class="form-control" type="text" name="from_name">
-  <label>Email</label>
-  <input class="form-control" type="email" name="from_email">
-  <label>Message</label>
-  <textarea class="form-control" name="message"></textarea>
-  <re-captcha class="mb-2" (resolved)="resolvedCaptcha($event)" siteKey="6Ld-e0YqAAAAAH7N1rd2GIjtsMIR_IDEQFhgdH62" required></re-captcha>
-  <p-button type="submit" label="Submit" />
-</form>
+<h1 class="contact-header mt-5 text-center">Contact <span class="header-highlight">Us</span></h1>
+<p-toast />
+<div class="bg-white row contact-container">
+  <img class="col-lg-6" src="../../assets/Images/contact/consumer-service.jpg" alt="consumer service">
+  <form class="contact-form col-lg-6" #contactUsForm="ngForm" (submit)="sendEmail($event)">
+    <div class="row mb-4">
+      <div class="col-lg-6">
+        <label class="mb-2">Name*</label>
+      <input class="form-control" type="text" name="from_name" [(ngModel)]="contactPerson.from_name" placeholder="please enter here" required>
+      </div>
+      <div class="col-lg-6">
+        <label class="mb-2">Phone*</label>
+      <input class="form-control" type="text" name="phone_number" [(ngModel)]="contactPerson.phone_number" placeholder="please enter here" required>
+      </div>
+    </div>
+    <label class="mb-2">Email*</label>
+    <input class="form-control mb-4" type="email" name="from_email" [(ngModel)]="contactPerson.from_email" placeholder="please enter here" required>
+    <label class="mb-2">Message*</label>
+    <textarea class="form-control mb-4" name="message" [(ngModel)]="contactPerson.message" rows="5" placeholder="please enter here" required></textarea>
+    <re-captcha class="mb-2" (resolved)="resolvedCaptcha($event)" siteKey="6Ld-e0YqAAAAAH7N1rd2GIjtsMIR_IDEQFhgdH62" required></re-captcha>
+    <button class="mt-4 submit-contact" type="submit" [disabled]="contactUsForm.invalid">Submit</button>
+  </form>
+</div>

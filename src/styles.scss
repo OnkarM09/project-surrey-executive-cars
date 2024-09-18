@@ -49,19 +49,24 @@ ul {
 
 button {
   cursor: pointer;
-}
-
-button.btn-web-primary {
-  color: $btn-text-color;
-  background-color: $btn-background-color;
   font-weight: 600;
   padding: 0.457rem 1rem;
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:disabled{
+    cursor: initial;
+
+  }
+
+  &.btn-web-primary{
     color: $btn-text-color;
     background-color: $btn-background-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $btn-text-color;
+      background-color: $btn-background-color;
+    }
   }
 }
 

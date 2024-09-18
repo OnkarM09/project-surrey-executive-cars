@@ -1,3 +1,52 @@
-form{
-  background-color: white;
+@import "../../variables.scss";
+
+.contact-header {
+  font-size: 4rem;
+}
+
+.contact-container {
+  padding: 2.25rem 2rem;
+
+  img {
+    border-radius: $lg-border-radius;
+    object-fit: cover;
+  }
+
+  input {
+    &:focus {
+      border: 1px solid $background-color;
+      box-shadow: none;
+    }
+  }
+  textarea {
+    resize: none;
+    &:focus {
+      border: 1px solid $background-color;
+      box-shadow: none;
+    }
+  }
+
+  .submit-contact {
+    color: $white-color;
+    background-color: $dark-text-color;
+    padding: 0.457rem 1.5rem;
+    border-radius: $lg-border-radius;
+
+    &:disabled{
+      background-color: #888;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-container {
+    form {
+      > div:first-child {
+        > div:first-child {
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
 }

@@ -1,33 +1,47 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 import { EditorModule } from 'primeng/editor';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { ButtonModule } from 'primeng/button';
+import { Person } from '../Models';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [CommonModule, FormsModule, RecaptchaFormsModule, RecaptchaModule, EditorModule, ButtonModule],
+  imports: [CommonModule, FormsModule, RecaptchaFormsModule, RecaptchaModule, EditorModule, ButtonModule, ToastModule],
   templateUrl: './contact-us.component.html',
-  styleUrl: './contact-us.component.scss'
+  styleUrl: './contact-us.component.scss',
+  providers : [MessageService]
 })
 export class ContactUsComponent {
 
-  captcha : string | null = '';
-  email : string = 'test1@email.com';
+  captcha: string | null = '';
+  email: string = 'test1@email.com';
   message: string | undefined;
-
-  constructor(){
+  contactPerson: Person = {
+    from_name: '',
+    phone_number: null,
+    from_email: '',
+    message: ''
   }
 
-  resolvedCaptcha(captcharesponse : string | null){
+  @ViewChild ("contactUsForm") contactForm! : NgForm;
+
+  constructor(private msgServie : MessageService,
+    private router : Router
+  ) {
+  }
+
+  resolvedCaptcha(captcharesponse: string | null) {
     this.captcha = captcharesponse;
-    console.log(this.captcha);
   }
 
-  sendEmail(e:Event){
+  sendEmail(e: Event) {
     emailjs
       .sendForm('service_9za1jud', 'template_q50wuiy', e.target as HTMLFormElement, {
         publicKey: 'C7GiovA5xz-EE_JGH',
@@ -35,11 +49,16 @@ export class ContactUsComponent {
       .then(
         () => {
           console.log('SUCCESS!');
+          this.contactForm.reset();
+          grecaptcha.reset();
+          this.router.navigate(['thank-you']);
         },
         (error) => {
           console.log('FAILED...', (error as EmailJSResponseStatus).text);
+          if(error.text == "reCAPTCHA: The g-recaptcha-response parameter not found"){
+            this.msgServie.add({ severity: 'contrast', summary: 'Error', detail: 'Please verify that you are not a robot!' });
+          }
         },
       );
   }
-
 }

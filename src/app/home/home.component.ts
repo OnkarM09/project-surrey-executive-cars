@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 interface SafetyInfo {
