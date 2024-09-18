@@ -1,0 +1,61 @@
+@import "../../variables.scss";
+
+.thank-you-header{
+  font-size: 4rem;
+}
+
+.thank-you-page-container{
+  gap : 30px;
+  max-width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left : 2rem;
+
+  .thank-you-icon{
+    height : 100px;
+    width : 100px;
+    border-radius: 50%;
+    background-color: #eee;
+
+    .bi-envelope-check{
+     font-size: 3.125rem;
+    }
+  }
+
+  .back-to-home{
+    max-width: 74%;
+
+    p{
+      color : $black-color;
+      font-weight: 600;
+      font-size: $sm-font-size;
+    }
+
+    a{
+      font-weight: bold;
+      font-size: $sm-md-font-size;
+
+      &:hover{
+        color : #777;
+        transition : all .3s ease-in;
+      }
+    }
+  }
+}
+
+@media (max-width : 992px){
+  .thank-you-page-container{
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width : 550px){
+  .thank-you-page-container{
+    flex-direction: column;
+    .back-to-home{
+      max-width: 100%;
+      text-align:center;
+    }
+  }
+}

@@ -31,6 +31,7 @@ p {
 }
 
 a {
+  color : $black-color;
   text-decoration: none;
   cursor: pointer;
 }
@@ -39,6 +40,11 @@ ul {
   li {
     list-style: none;
   }
+}
+
+.header-highlight{
+  color: #fec877;
+  text-shadow: 0 0 1px #aa8c5d;
 }
 
 button {
@@ -57,4 +63,11 @@ button.btn-web-primary {
     color: $btn-text-color;
     background-color: $btn-background-color;
   }
+}
+
+.bg-white {
+  background-color: $white-color;
+  padding: 2.5rem 4rem;
+  border-radius: $md-border-radius;
+  margin: 3rem 0;
 }

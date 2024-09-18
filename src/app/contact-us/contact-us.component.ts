@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 import { EditorModule } from 'primeng/editor';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [CommonModule, FormsModule, RecaptchaFormsModule, RecaptchaModule, EditorModule],
+  imports: [CommonModule, FormsModule, RecaptchaFormsModule, RecaptchaModule, EditorModule, ButtonModule],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss'
 })
