@@ -54,7 +54,7 @@
 <div class="safety-info d-flex justify-content-between">
   <div class="row">
     @for(item of safetyInfoArr; track item){
-      <div class="col-lg-3 animation-duration-1000 animation-ease-in-out" pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright">
+      <div class="col-lg-3 animation-duration-1000 animation-ease-in-out">
         <div class="d-flex">
           <img [src]="item.imagePath" [alt]="item.altTxt" />"
           <h5 class="mb-0 mt-4">{{item.headerTxt}}</h5>
@@ -65,11 +65,11 @@
   </div>
 </div>
 
-<div class="fleet-section animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">
-  <h1 class="mt-0 mb-3">Our Fleet</h1>
-  <p>We take pride in our diverse fleet of vehicles, designed to meet a variety of trasnportation neds. From compact cars for solo travelers to spacious vans for group outings, each vehicle is meticulously maintained to ensure your comport and safety. Our professionsal drivers are experienced and dedicated providing a smooth ride, no matter the time of day or destination. With our extensive fleet, you can count on us to deliver reliable and efficent service tailored to your specific requirements.</p>
-    <h4>Choose a ride that fits your lifestyle.</h4>
-    <div class="mt-5 row">
+<div class="fleet-section">
+  <h1 class="mt-0 mb-3 animation-duration-1000 animation-ease-in-out"  pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright">Our Fleet</h1>
+  <p class="animation-duration-1000 animation-ease-in-out" pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright">We take pride in our diverse fleet of vehicles, designed to meet a variety of trasnportation neds. From compact cars for solo travelers to spacious vans for group outings, each vehicle is meticulously maintained to ensure your comport and safety. Our professionsal drivers are experienced and dedicated providing a smooth ride, no matter the time of day or destination. With our extensive fleet, you can count on us to deliver reliable and efficent service tailored to your specific requirements.</p>
+    <h4 class="animation-duration-1000 animation-ease-in-out" pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright">Choose a ride that fits your lifestyle.</h4>
+    <div class="mt-5 row animation-duration-1000 animation-ease-in-out"  pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright">
         <div class="fleet-card col-lg-4">
           <div class="car-image-container normal-car">
           </div>

@@ -70,9 +70,26 @@ button {
   }
 }
 
+.page-header-txt{
+  margin-top: 3rem;
+  font-size: 4rem;
+}
+
 .bg-white {
   background-color: $white-color;
   padding: 2.5rem 4rem;
   border-radius: $md-border-radius;
   margin: 3rem 0;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $black-color;
+  }
+
+  p {
+    color: $black-color;
+  }
 }

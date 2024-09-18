@@ -1,3 +1,35 @@
-p{
-  color : white
+@import "../../variables.scss";
+
+.about-us-container{
+  img{
+    object-fit: contain;
+    border-radius: $md-border-radius;
+  }
+  p, em{
+    font-size: $sm-font-size;
+  }
+}
+
+@media (max-width : 768px) {
+  .bg-white{
+
+    &.about-us-container{
+      padding: 2rem;
+    }
+  }
+}
+
+@media (max-width : 576px) {
+  .bg-white{
+
+    &.about-us-container{
+
+      p{
+
+        &:first-child{
+          margin-top : 2rem;
+        }
+      }
+    }
+  }
 }

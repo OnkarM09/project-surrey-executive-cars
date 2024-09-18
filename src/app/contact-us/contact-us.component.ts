@@ -9,14 +9,15 @@ import { Person } from '../Models';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { Router } from '@angular/router';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [CommonModule, FormsModule, RecaptchaFormsModule, RecaptchaModule, EditorModule, ButtonModule, ToastModule],
+  imports: [CommonModule, FormsModule, RecaptchaFormsModule, RecaptchaModule, EditorModule, ButtonModule, ToastModule, AnimateOnScrollModule],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss',
-  providers : [MessageService]
+  providers: [MessageService]
 })
 export class ContactUsComponent {
 
@@ -30,10 +31,10 @@ export class ContactUsComponent {
     message: ''
   }
 
-  @ViewChild ("contactUsForm") contactForm! : NgForm;
+  @ViewChild("contactUsForm") contactForm!: NgForm;
 
-  constructor(private msgServie : MessageService,
-    private router : Router
+  constructor(private msgServie: MessageService,
+    private router: Router
   ) {
   }
 
@@ -55,7 +56,7 @@ export class ContactUsComponent {
         },
         (error) => {
           console.log('FAILED...', (error as EmailJSResponseStatus).text);
-          if(error.text == "reCAPTCHA: The g-recaptcha-response parameter not found"){
+          if (error.text == "reCAPTCHA: The g-recaptcha-response parameter not found") {
             this.msgServie.add({ severity: 'contrast', summary: 'Error', detail: 'Please verify that you are not a robot!' });
           }
         },

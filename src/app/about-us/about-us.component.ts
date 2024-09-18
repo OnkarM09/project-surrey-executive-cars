@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
-import { ScrollTopModule } from 'primeng/scrolltop';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [AnimateOnScrollModule, ScrollTopModule],
+  imports: [AnimateOnScrollModule],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.scss',
   styles: [

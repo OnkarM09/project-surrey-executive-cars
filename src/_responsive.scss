@@ -263,8 +263,12 @@
   .safety-info,
   .fleet-section,
   .travel-with-us-section,
-  footer {
+  .bg-white {
     padding: 1.5rem !important;
+
+    &.row{
+      padding : .857rem .25rem !important;
+    }
   }
 }
 
