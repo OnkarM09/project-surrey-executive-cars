@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.service-container {
+  img {
+    object-fit: cover;
+    border-radius: $md-border-radius;
+  }
+
+  .btn-service-labels {
+    cursor: initial;
+    width: 100%;
+    padding: 0.5rem 0;
+
+    &:hover {
+      cursor: initial;
+    }
+  }
+}
+
+.service-fleet-cards{
+  span,
+  div {
+    color: $white-color;
+    font-size: $sm-font-size;
+  }
+  .img-wrapper {
+    height: 18.75rem;
+    background-color: $white-color;
+    border-radius: $md-border-radius;
+
+    img {
+      object-fit: contain;
+
+      &:first-child{
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+

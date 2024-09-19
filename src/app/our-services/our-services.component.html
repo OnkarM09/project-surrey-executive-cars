@@ -1,1 +1,34 @@
-<h1>Servies</h1>
+<h1 class="page-header-txt text-center header-highlight fadein animation-duration-2000 animation-ease-in-out">Services</h1>
+<div class="bg-white service-container fadein animation-duration-2000 animation-ease-in-out">
+  <div class="row">
+    @for(service of servicesArr; track service){
+    <div class="col-md-3 services-card d-flex flex-column justify-content-between">
+      <div>
+        <img src="../../assets/Images/home-page/parking-valet-helping-woman-park-her-car.jpg" alt="">
+        <h3 class="mt-4">{{service.headerTxt}}</h3>
+        <p class="mt-4 mb-4">{{service.serviceTxt}}</p>
+      </div>
+      <button class="btn btn-service-labels dark-btn"><i [class]="'mr-2 bi '+ service.iconClassName"></i> {{service.headerTxt}}</button>
+    </div>
+    }
+  </div>
+</div>
+<h1 class="mb-3 mt-5 ml-5 animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">Our <span class="header-highlight">Fleet</span></h1>
+<p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false" [responsiveOptions]="responsiveOptions" autoplayInterval="15000">
+  <ng-template let-product pTemplate="item">
+    <div class="m-2 p-1 service-fleet-cards animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">
+      <div class="mb-3">
+        <div class="relative mx-auto">
+          <div class="img-wrapper w-full d-flex align-items-center justify-content-center">
+            <img [src]="product.image" [alt]="product.name">
+          </div>
+        </div>
+      </div>
+      <div class="mb-3 font-medium">
+        {{ product.name }}
+      </div>
+        <span class="me-3 d-inline-flex align-items-center"><i class="bi bi-people-fill mr-2"></i>{{product.peopleCount}}</span>
+        <span class="d-inline-flex align-items-center"><i class="bi bi-suitcase-lg mr-2"></i> {{product.lugguageCount}}</span>
+    </div>
+  </ng-template>
+</p-carousel>

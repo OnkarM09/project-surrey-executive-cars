@@ -1,13 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
-
-interface SafetyInfo {
-  imagePath: string,
-  headerTxt: string,
-  infoTxt: string,
-  altTxt : string
-}
+import { SafetyInfo } from '../Models';
 
 @Component({
   selector: 'app-home',

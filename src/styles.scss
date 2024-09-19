@@ -28,6 +28,7 @@ h6 {
 
 p {
   color: $white-color;
+  font-size: $sm-font-size;
 }
 
 a {
@@ -47,14 +48,29 @@ ul {
   text-shadow: 0 0 1px #aa8c5d;
 }
 
-button {
+.btn {
   cursor: pointer;
-  font-weight: 600;
-  padding: 0.457rem 1rem;
+  font-weight: bold;
+  padding: 0.557rem 1rem;
+  border-radius: $lg-border-radius;
+  border : none;
 
   &:disabled{
     cursor: initial;
 
+  }
+
+  &.dark-btn{
+    background-color: $background-color;
+    color : $white-color;
+    font-weight: 600;
+    border-radius: $lg-border-radius;
+
+    &:hover{
+      background-color: $dark-btn-background-color;
+      color : $white-color;
+      transition : all .3s ease-in-out;
+    }
   }
 
   &.btn-web-primary{
