@@ -1,19 +1,19 @@
 <footer class="bg-white animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">
-  <div class="row justify-content-center">
+  <div class="row">
     <div class="col-lg-4">
       <h2 class="mb-3">Surrey Express Cars</h2>
       <p class="mb-2 d-flex align-items-center"><i class="bi bi-geo-alt-fill mr-2"></i> 30 Hammersley Drive, Guildford, Surrey</p>
       <a class="mb-2 d-flex align-items-center" href="mailto:info@surreyexpresscar.co.uk"><i class="bi bi-envelope-fill mr-2"></i> info&#64;surreyexpresscar.co.uk</a>
       <a class="mb-2 d-flex align-items-center" href="tel:+4401252418041"><i class="bi bi-telephone-fill mr-2"></i> 01252418041</a>
     </div>
-    <div class="col-lg-3 footer-services">
-      <h4 class="mb-3 pt-2"><i class="bi bi-taxi-front-fill mr-2"></i>Services</h4>
+    <div class="col-lg-4 footer-services">
+      <h4 class="mb-3"><i class="bi bi-taxi-front-fill mr-2"></i>Services</h4>
       @for(service of footerServicesArr; track service){
         <p class="mb-0 d-flex align-items-center"><i [class]="'bi mr-2 '+ service.icon"></i>{{service.text}}</p>
       }
     </div>
-    <div class="col-lg-3 follow-us-section">
-      <h4 class="mb-3 pt-2"><i class="bi bi-credit-card-fill mr-2"></i>Payment Methods</h4>
+    <div class="col-lg-4 follow-us-section">
+      <h4 class="mb-3"><i class="bi bi-credit-card-fill mr-2"></i>Payment Methods</h4>
       <p>We accept all major credit cards, PayPal, and cash.</p>
       <h4 class="mb-3">Follow Us</h4>
       <a  class="mr-5"><i class="bi bi-linkedin"></i></a>
@@ -21,4 +21,5 @@
       <a class="mr-5"><i class="bi bi-whatsapp"></i></a>
     </div>
   </div>
+  <span>Copyright Surrey Express Cars<i class="bi bi-c-circle me-1 ms-1"></i>2024</span>
 </footer>

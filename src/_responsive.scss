@@ -73,6 +73,12 @@
       }
     }
   }
+
+  .service-container{
+    > .row{
+      gap : 1.5rem;
+    }
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {

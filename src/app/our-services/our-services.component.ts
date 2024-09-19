@@ -53,13 +53,6 @@ export class OurServicesComponent implements OnInit {
       peopleCount: 4,
       lugguageCount: 2,
     },
-    // {
-    //   id: '2',
-    //   name: 'Mercedes-Benz S-Class',
-    //   image: `${this.imgPath}s-class.png`,
-    //   peopleCount: 4,
-    //   lugguageCount: 2,
-    // },
     {
       id: '3',
       name: 'Mercedes-Benz V-Class',
@@ -71,12 +64,12 @@ export class OurServicesComponent implements OnInit {
     this.responsiveOptions = [
       {
         breakpoint: '1199px',
-        numVisible: 3,
+        numVisible: 1,
         numScroll: 1
       },
       {
         breakpoint: '991px',
-        numVisible: 2,
+        numVisible: 1,
         numScroll: 1
       },
       {
