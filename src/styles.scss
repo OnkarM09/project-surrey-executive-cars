@@ -32,7 +32,7 @@ p {
 }
 
 a {
-  color : $black-color;
+  color: $black-color;
   text-decoration: none;
   cursor: pointer;
 }
@@ -43,7 +43,7 @@ ul {
   }
 }
 
-.header-highlight{
+.header-highlight {
   color: #fec877;
   text-shadow: 0 0 1px #aa8c5d;
 }
@@ -53,27 +53,26 @@ ul {
   font-weight: bold;
   padding: 0.557rem 1rem;
   border-radius: $lg-border-radius;
-  border : none;
+  border: none;
 
-  &:disabled{
+  &:disabled {
     cursor: initial;
-
   }
 
-  &.dark-btn{
+  &.dark-btn {
     background-color: $background-color;
-    color : $white-color;
+    color: $white-color;
     font-weight: 600;
     border-radius: $lg-border-radius;
 
-    &:hover{
+    &:hover {
       background-color: $dark-btn-background-color;
-      color : $white-color;
-      transition : all .3s ease-in-out;
+      color: $white-color;
+      transition: all 0.3s ease-in-out;
     }
   }
 
-  &.btn-web-primary{
+  &.btn-web-primary {
     color: $btn-text-color;
     background-color: $btn-background-color;
 
@@ -86,7 +85,7 @@ ul {
   }
 }
 
-.page-header-txt{
+.page-header-txt {
   margin-top: 3rem;
   font-size: 4rem;
 }
@@ -107,5 +106,41 @@ ul {
 
   p {
     color: $black-color;
+  }
+}
+
+.faq-card {
+  border: none;
+  background-color: $background-color;
+
+  .p-accordion-tab {
+    margin-bottom: 1.5rem;
+
+    .p-accordion-header-link {
+      background-color: $background-color;
+      color: $text-color;
+
+      .p-accordion-header-text {
+        font-weight: normal;
+        font-size: $sm-font-size;
+      }
+    }
+
+    .p-accordion-content {
+      background-color: $background-color;
+      color: $text-color;
+
+      P{
+        font-weight: normal;
+      }
+    }
+  }
+
+  p-accordiontab{
+    &:last-child{
+      .p-accordion-tab {
+        margin-bottom: 0;
+      }
+    }
   }
 }

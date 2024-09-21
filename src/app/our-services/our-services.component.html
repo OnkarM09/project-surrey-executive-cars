@@ -32,3 +32,14 @@
     </div>
   </ng-template>
 </p-carousel>
+<h1 class="mb-5 mt-4 animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">Common <span class="header-highlight">FAQs</span></h1>
+<div class="card faq-card flex justify-content-center animation-duration-2000 animation-ease-in-out" pAnimateOnScroll enterClass="fadein" leaveClass="fadeout">
+  <p-accordion>
+    @for(question of faqsArr; track question){
+      <p-accordionTab [header]="question.header">
+        <p class="mb-0">{{question.body}}</p>
+      </p-accordionTab>
+    }
+
+  </p-accordion>
+</div>

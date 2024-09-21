@@ -5,6 +5,7 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
 
 .carousel {
   .carousel-inner {
+    z-index: 1;
     height: 37.5rem;
     background: linear-gradient(
       to right,
@@ -78,6 +79,13 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
           p {
             max-width: 24rem;
           }
+
+          .btn-web-primary{
+            position: relative;
+            z-index: 111;
+            pointer-events: all;
+            cursor: pointer;
+          }
         }
       }
 
@@ -115,6 +123,11 @@ $homePageRelativePath: $imageRelativePath + "home-page/";
         }
       }
     }
+  }
+  .carousel-control-next, .carousel-control-prev{
+   height: fit-content;
+   top: 50%;
+   transform: translateY(-50%);
   }
 }
 

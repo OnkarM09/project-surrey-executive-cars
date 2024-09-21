@@ -3,11 +3,12 @@ import { Service } from '../Models';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'primeng/carousel';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { AccordionModule } from 'primeng/accordion';
 
 @Component({
   selector: 'app-our-services',
   standalone: true,
-  imports: [CommonModule, CarouselModule, AnimateOnScrollModule],
+  imports: [CommonModule, CarouselModule, AnimateOnScrollModule, AccordionModule],
   templateUrl: './our-services.component.html',
   styleUrl: './our-services.component.scss'
 })
@@ -16,6 +17,7 @@ export class OurServicesComponent implements OnInit {
   imgPath: string = '../../assets/Images/services/';
   servicesArr: Service[] = [];
   products: any[] = [];
+  faqsArr : any[] = [];
   responsiveOptions: any | undefined;
   ngOnInit(): void {
     this.servicesArr = [
@@ -76,6 +78,33 @@ export class OurServicesComponent implements OnInit {
         breakpoint: '767px',
         numVisible: 1,
         numScroll: 1
+      }
+    ];
+
+    this.faqsArr = [
+      {
+        header : "How do I book a ride?",
+        body : "You can book a ride through our website by enetering the deatails and submitting the form or calling 01252418041."
+      },
+      {
+        header : `What payment methods do you accept?`,
+        body : `We accept credit/debit cards, digital wallets, and cash, depending on your location.`
+      },
+      {
+        header : `Can I schedule ride in advance?`,
+        body : `Yes, you can schedule a ride up to 30 days in advance using our website.`
+      },
+      {
+        header : `What I should I do if I left something in the car?`,
+        body : `Contact our customer service immediately with your ride details, and we'll help you retrieve your item.`
+      },
+      {
+        header : `Are drivers insured?`,
+        body : `Yes, all our drivers are insured and undergo backgroudn checks for safety.`
+      },
+      {
+        header : `What if I need to cancel my ride?`,
+        body : `You can cancel your ride through calling 01252418041 or submitting a request through contact form. Cancellation fees may apply depending on the timing.`
       }
     ];
   }

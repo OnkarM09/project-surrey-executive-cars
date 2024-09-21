@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { SafetyInfo } from '../Models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,10 @@ import { SafetyInfo } from '../Models';
 export class HomeComponent implements OnInit {
   safetyInfoArr: SafetyInfo[] = [];
   iconPath : string  = '../../assets/Images/icons/';
+
+  constructor(private router : Router){
+  }
+
   ngOnInit(): void {
     this.safetyInfoArr = [
       {
@@ -40,5 +45,9 @@ export class HomeComponent implements OnInit {
         altTxt : '24-7.png'
       },
     ];
+  }
+
+  redirectToContanctPage() :void{
+    this.router.navigate(['/contact-us']);
   }
 }
