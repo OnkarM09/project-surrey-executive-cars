@@ -79,6 +79,12 @@
       gap : 1.5rem;
     }
   }
+
+  footer{
+    .row{
+      gap : 1.5rem !important;
+    }
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
