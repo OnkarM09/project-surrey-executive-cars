@@ -33,3 +33,29 @@
     }
   }
 }
+
+.choose-us{
+   img{
+    border-radius: $md-border-radius;
+    transition: all .3s ease-in-out;
+    &:hover{
+      transform: scale(1.075);
+    }
+  }
+}
+@media (max-width: 1200px){
+  .page-header-txt{
+    font-size: 3rem;
+  }
+
+  .choose-us{
+    gap : 1.5rem;
+
+    img{
+
+      &:hover{
+        transform : none !important;
+      }
+    }
+  }
+}
