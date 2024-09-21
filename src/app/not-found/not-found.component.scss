@@ -1,0 +1,8 @@
+@import "../../variables.scss";
+.not-found-container{
+  height: calc(100vh - 3.375rem - 14.125rem - 11.125rem - 1rem);
+
+  h1{
+    font-size: $lg-font-size;
+  }
+}
