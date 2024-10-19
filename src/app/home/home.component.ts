@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
       {
         imagePath : `${this.iconPath}bus.png`,
         headerTxt : 'Largest Fleet',
-        infoTxt : 'We opertate a large fleet of well-maintained vehicles to meet all your transportation needs.',
+        infoTxt : 'We operate a large fleet of well-maintained vehicles to meet all your transportation needs.',
         altTxt : 'bus.png'
       },
       {

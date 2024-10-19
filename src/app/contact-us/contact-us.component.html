@@ -17,7 +17,7 @@
     <input class="form-control mb-3" type="email" name="from_email" [(ngModel)]="contactPerson.from_email" placeholder="please enter here" required>
     <label class="mb-2">Message*</label>
     <textarea class="form-control mb-3" name="message" [(ngModel)]="contactPerson.message" rows="5" placeholder="please enter here" required></textarea>
-    <re-captcha class="mb-2" (resolved)="resolvedCaptcha($event)" siteKey="6Ld-e0YqAAAAAH7N1rd2GIjtsMIR_IDEQFhgdH62" required></re-captcha>
+    <re-captcha class="mb-2" (resolved)="resolvedCaptcha($event)" [siteKey]="captchaSiteKey" required></re-captcha>
     <button class="mt-3 submit-contact btn" type="submit" [disabled]="contactUsForm.invalid">Submit</button>
   </form>
 </div>

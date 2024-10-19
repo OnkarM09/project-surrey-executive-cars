@@ -24,25 +24,25 @@ export class OurServicesComponent implements OnInit {
       {
         imgPath: `${this.imgPath}corporate-taxi.jpg`,
         headerTxt: 'Corporate Transfer',
-        serviceTxt: `Our Corporate Transfer Service specialises in providing reliable and professional transportation for businesses and their clients. We understand the importance of puctuality and a polished image, which is why our experienced drivers ensure timely arrivals at meetings, conferences, and events.Book your executive transport today and elevate your trable experience.`,
+        serviceTxt: `Our Corporate Transfer Service specialises in providing reliable and professional transportation for businesses and their clients. We understand the importance of puctuality and a polished image, which is why our experienced drivers ensure timely arrivals at meetings, conferences, and events. Book your executive transport today and elevate your travel experience.`,
         iconClassName: 'bi-briefcase-fill'
       },
       {
         imgPath: `${this.imgPath}airport-transfer.jpg`,
         headerTxt: 'Airport Transfer',
-        serviceTxt: `Our Airport Transfer Service specialises in providing reliable and comforable transportation to and from the aiport. We understand the importance of punctuality, which is why our professional divers ensure you arrive on time, whther you're heading to catch a flight or returing home. Let us take care of your airport transfers and focus on what truly matters. Book your ride today and travel with ease.`,
+        serviceTxt: `Our Airport Transfer Service specialises in providing reliable and comfortable transportation to and from the airport. We understand the importance of punctuality, which is why our professional divers ensure you arrive on time, whether you're heading to catch a flight or returning home. Let us take care of your airport transfers and focus on what truly matters. Book your ride today and travel with ease.`,
         iconClassName: 'bi-airplane-fill'
       },
       {
         imgPath: `${this.imgPath}wedding-transfer.jpg`,
         headerTxt: 'Wedding Transfer',
-        serviceTxt: 'Our Wedding Transfer Service specialises in making your special day as seamless and memorable as possible. We provide elegant and comfortable trasnportation for you and your guests, ensuring timely arrivals at the ceremony and reception venues. With a fleet of stylish vehicles and professional drivers, we priortise safety and luxury, allowing you to focus on celebrating your love. Book now for a stress-free experience.',
+        serviceTxt: 'Our Wedding Transfer Service specialises in making your special day as seamless and memorable as possible. We provide elegant and comfortable transportation for you and your guests, ensuring timely arrivals at the ceremony and reception venues. With a fleet of stylish vehicles and professional drivers, we prioritise safety and luxury, allowing you to focus on celebrating your love. Book now for a stress-free experience.',
         iconClassName: 'bi-heart-fill'
       },
       {
         imgPath: `${this.imgPath}taxi-service.jpg`,
         headerTxt: 'Taxi Service',
-        serviceTxt: 'Our Taxi Service speicialises in providing reliable and convenient transportation for your everyday needs. Whether you require a quick ride aross town or a longer journey, our professional drivers are committed to getting you to your destination safely and on time. Trust us for all your taxi needs and enjoy jussle-free journeys at competitive rates. Book your ride today and experience the difference.',
+        serviceTxt: 'Our Taxi Service speicialises in providing reliable and convenient transportation for your everyday needs. Whether you require a quick ride across town or a longer journey, our professional drivers are committed to getting you to your destination safely and on time. Trust us for all your taxi needs and enjoy hassle-free journeys at competitive rates. Book your ride today and experience the difference.',
         iconClassName: 'bi-taxi-front-fill'
       }
     ];
@@ -95,12 +95,12 @@ export class OurServicesComponent implements OnInit {
         body : `Yes, you can schedule a ride up to 30 days in advance using our website.`
       },
       {
-        header : `What I should I do if I left something in the car?`,
+        header : `What should I do if I left something in the car?`,
         body : `Contact our customer service immediately with your ride details, and we'll help you retrieve your item.`
       },
       {
         header : `Are drivers insured?`,
-        body : `Yes, all our drivers are insured and undergo backgroudn checks for safety.`
+        body : `Yes, all our drivers are insured and undergo background checks for safety.`
       },
       {
         header : `What if I need to cancel my ride?`,

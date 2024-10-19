@@ -22,8 +22,8 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 export class ContactUsComponent {
 
   captcha: string | null = '';
-  email: string = 'test1@email.com';
   message: string | undefined;
+  captchaSiteKey : string = '6Ld-e0YqAAAAAH7N1rd2GIjtsMIR_IDEQFhgdH62';
   contactPerson: Person = {
     from_name: '',
     phone_number: null,
@@ -49,7 +49,6 @@ export class ContactUsComponent {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
           this.contactForm.reset();
           grecaptcha.reset();
           this.router.navigate(['thank-you']);
